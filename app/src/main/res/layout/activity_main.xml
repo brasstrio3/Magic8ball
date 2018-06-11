@@ -41,7 +41,6 @@
         android:layout_height="136dp"
         android:layout_marginBottom="129dp"
         android:layout_marginTop="85dp"
-        android:text="Answer"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/txtQuestion"
         app:layout_constraintEnd_toEndOf="parent"

@@ -14,16 +14,16 @@ class MainActivity : AppCompatActivity() {
         displayResponse()
     }
 
-    fun generateRandomNumber(): Int {
-            var number = Random()
-            var min = 1
-            var max = 20
-            val dice = number.nextInt(max + 1 - min) + min
-            return dice
+    private fun generateRandomNumber(): Int {
+            val number = Random()
+            val min = 1
+            val max = 20
+            val num = number.nextInt(max + 1 - min) + min
+            return num
     }
 
-    fun response() {
-        var resp = ""
+    private fun response(): String {
+        var resp = " "
         when (generateRandomNumber()) {
             1 -> resp = "It is certain"
             2 -> resp = "It is decidedly so"
@@ -47,9 +47,10 @@ class MainActivity : AppCompatActivity() {
             20 -> resp = "Very doubtful"
         }
         return resp
+
     }
 
-    fun displayResponse() {
+    private fun displayResponse() {
         btnAskQuestion.setOnClickListener() {
             lblAnswer.text = response()
         }
